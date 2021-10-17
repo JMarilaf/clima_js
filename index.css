@@ -1,3 +1,100 @@
+/* CSS HEX 3
+--black: #1e1d1d;
+--oxford-blue: #14213dff;
+--orange-web: #fca311ff;
+--platinum: #e5e5e5ff;
+--white: #ffffffff;
+
+*/
+
 *{
     font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #1e1d1d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e5e5e5ff;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+}
+
+.container > div,
+.container .title, 
+.container .info, 
+.container .footer {
+    background: #fca311ff;
+    padding: 20px;
+    min-height: 5vh;
+    max-height: 20vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0px 10px 0px;
+    border: 5px solid #e5e5e5ff;
+}
+
+.container .title{
+    grid-column: span 3;
+    font-size: 5em;
+}
+
+.container .description-container{
+    grid-row: span 2;
+    grid-column: 1/2;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.description-container .description{
+    grid-column: 1/2;
+}
+
+.description-container .image-icon{
+    grid-column: 2/3;
+}
+
+.container .mostrar-max{
+    grid-column: 2/3;
+}
+
+.container .location{
+    grid-column: 3/4;
+}
+
+.container .mostrar-min{
+    grid-column: 2/3;
+}
+
+.container .temperature{
+    grid-column: 3/4;
+}
+
+.container .pressure{
+    grid-column: 1/2;
+}
+
+.container .wind{
+    grid-column: 2/3;
+}
+
+.container .humidity{
+    grid-column: 3/4;
+}
+
+.footer{
+    grid-column: 1/4;
 }
