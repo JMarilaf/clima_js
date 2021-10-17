@@ -1,12 +1,3 @@
-/* CSS HEX 3
---black: #1e1d1d;
---oxford-blue: #14213dff;
---orange-web: #fca311ff;
---platinum: #e5e5e5ff;
---white: #ffffffff;
-
-*/
-
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -59,15 +50,15 @@ body{
     justify-items: center;
 }
 
-.description-container .description{
+.description-container .description,
+.container .pressure{
     grid-column: 1/2;
 }
 
-.description-container .image-icon{
-    grid-column: 2/3;
-}
-
-.container .mostrar-max{
+.description-container .image-icon,
+.container .mostrar-max,
+.container .mostrar-min,
+.container .wind{
     grid-column: 2/3;
 }
 
@@ -75,22 +66,7 @@ body{
     grid-column: 3/4;
 }
 
-.container .mostrar-min{
-    grid-column: 2/3;
-}
-
-.container .temperature{
-    grid-column: 3/4;
-}
-
-.container .pressure{
-    grid-column: 1/2;
-}
-
-.container .wind{
-    grid-column: 2/3;
-}
-
+.container .temperature,
 .container .humidity{
     grid-column: 3/4;
 }
