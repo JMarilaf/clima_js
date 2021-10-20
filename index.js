@@ -29,47 +29,21 @@ const setWeatherData = data => {
         document.getElementById(key).textContent = weatherData[key];
     });
 
-    let iconCode = data.weather[0].icon;
+    let mainDescription = data.weather[0].main;
 
-    //Mostrar iconos animados en carpeta local
-    switch (iconCode) {
-        case '01d':
-            iconoClima.src = 'animated/clear-sky-day.svg'
-        break;
-        case '01n':
-            iconoClima.src = 'animated/clear-sky-night.svg'
-        break;
-        case '02d':
-            iconoClima.src = 'animated/few-clouds-day.svg'
-        break;
-        case '02n':
-            iconoClima.src = 'animates/few-clouds-day.svg'
-        break;
-        case '03d':
-        case '03n':
-            iconoClima.src = 'animated/scattered-clouds'
-        break;
-        case '04d':
-        case '04n':
-            iconoClima.src = 'animated/broken-clouds.svg'
-        break;
-        case '09d':
-        case '09n':
-        case '10d':
-        case '10n':
-            iconoClima.src = 'animated/rain.svg'
-        break;
-        case '11d':
-        case '11n':
-            iconoClima.src = 'animated/thunderston.svg'
-        break;
-        default:
-            iconoClima.src = 'animated/mist.png'
+    const ICON_WEATHER = {
+        'Thunderstorm': () => iconoClima.src = 'animated/thunderstorm.svg',
+        'Drizzle': () => iconoClima.src = 'animated/scattered-clouds.svg',
+        'Rain': () => iconoClima.src = 'animated/rain.svg',
+        'Snow': () => iconoClima.src = 'animates/snow.svg',
+        'Clear': () => iconoClima.src = 'animated/clear-sky-day.svg',
+        'Clouds': () => iconoClima.src = 'animated/few clouds-day.svg'
     }
 
-    //Mostrar icono utilizando api de "openweather"
-    // const urlIcon = `http://openweathermap.org/img/wn/${iconCode}.png`;
-    // iconoClima.src = urlIcon;
+    const a = ICON_WEATHER[mainDescription]
+        ? ICON_WEATHER[mainDescription]()
+        : iconoClima.src = 'animated/mist.svg'
+
 }
 
 const getDate = () => {
