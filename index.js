@@ -42,7 +42,7 @@ const setWeatherData = data => {
 
     const a = ICON_WEATHER[mainDescription]
         ? ICON_WEATHER[mainDescription]()
-        : iconoClima.src = 'animated/mist.svg'
+        : iconoClima.src = 'animated/mist.png'
 
 }
 
