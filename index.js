@@ -11,10 +11,15 @@ const fetchData = position => {
         .then(data => setWeatherData(data));
 }
 
+//Capitalizar descripcion
+function capitalizar(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 const setWeatherData = data => {
     console.log(data);
     const weatherData = {
-        description: `${data.weather[0].description}`,
+        description: `${capitalizar(data.weather[0].description)}`,
         tempMax: `${data.main.temp_max} °C`,
         location: `${data.name}`,
         tempMin: `${data.main.temp_min} °C`,
