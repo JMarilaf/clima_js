@@ -33,11 +33,11 @@ const setWeatherData = data => {
 
     const ICON_WEATHER = {
         'Thunderstorm': () => iconoClima.src = 'animated/thunderstorm.svg',
-        'Drizzle': () => iconoClima.src = 'animated/scattered-clouds.svg',
+        'Drizzle': () => iconoClima.src = 'animated/drizzle.svg',
         'Rain': () => iconoClima.src = 'animated/rain.svg',
         'Snow': () => iconoClima.src = 'animates/snow.svg',
-        'Clear': () => iconoClima.src = 'animated/clear-sky-day.svg',
-        'Clouds': () => iconoClima.src = 'animated/few clouds-day.svg'
+        'Clear': () => iconoClima.src = 'animated/clear.svg',
+        'Clouds': () => iconoClima.src = 'animated/clouds.svg'
     }
 
     const a = ICON_WEATHER[mainDescription]
